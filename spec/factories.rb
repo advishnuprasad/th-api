@@ -1,6 +1,19 @@
 FactoryGirl.define do
+  factory :user_answer do
+    user
+    question
+  end
+
+
+  factory :question do
+    title         "Sample"
+    description   "Sample"
+    image         "Sample"
+    answer        "Sample"
+    level         1
+  end
+
   factory :user do
-    name                   "Test User"
     sequence :email do |n|
       "person#{n}@example.com"
     end
