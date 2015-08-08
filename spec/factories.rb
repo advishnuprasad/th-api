@@ -8,7 +8,7 @@ FactoryGirl.define do
   factory :question do
     title         "Sample"
     description   "Sample"
-    image         "Sample"
+    image         File.open(Rails.root.join('spec', 'support', 'images.jpg'))
     answer        "Sample"
     level         1
   end
