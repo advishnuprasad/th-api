@@ -17,6 +17,8 @@ group :development, :test do
   gem 'shoulda-matchers'
 end
 
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 
 
 # To use ActiveModel has_secure_password
