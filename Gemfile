@@ -13,6 +13,8 @@ gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
 end
 
 
