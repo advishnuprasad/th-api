@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150808064248) do
+ActiveRecord::Schema.define(version: 20150808141507) do
+
+  create_table "questions", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image"
+    t.string   "answer"
+    t.integer  "level"
+    t.boolean  "is_last_level", default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
