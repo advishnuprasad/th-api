@@ -1,2 +1,1 @@
-# th_api
-Treasure Hunt API app
+# Treasure Hunt API app
