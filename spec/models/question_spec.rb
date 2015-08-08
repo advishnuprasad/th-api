@@ -2,9 +2,14 @@ require 'rails_helper'
 
 RSpec.describe Question, :type => :model do
   context "Validations" do
-    it { is_expected.to validate_presence_of :title }
+    subject { FactoryGirl.create(:question) }
     it { is_expected.to validate_presence_of :level }
     it { is_expected.to validate_presence_of :answer }
+
+    it "should validate the file size" do
+      question = FactoryGirl.build(:question)
+      expect(question.valid?).to be_truthy
+    end
   end
 
   describe '#first_level' do
