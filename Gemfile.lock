@@ -14,6 +14,8 @@ GEM
       activesupport (= 4.1.6)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_model_serializers (0.9.3)
+      activemodel (>= 3.2)
     activemodel (4.1.6)
       activesupport (= 4.1.6)
       builder (~> 3.1)
@@ -100,6 +102,10 @@ GEM
     rspec-support (3.1.2)
     shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
+    simple_token_authentication (1.10.0)
+      actionmailer (>= 3.2.6, < 5)
+      actionpack (>= 3.2.6, < 5)
+      devise (~> 3.2)
     simplecov (0.10.0)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -124,6 +130,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers (~> 0.9.3)
   carrierwave
   codeclimate-test-reporter
   devise
@@ -133,5 +140,6 @@ DEPENDENCIES
   responders
   rspec-rails (~> 3.0)
   shoulda-matchers
+  simple_token_authentication (~> 1.0)
   spring
   sqlite3
