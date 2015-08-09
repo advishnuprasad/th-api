@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   namespace :api, defaults: {format: 'json'} do
     scope module: :v1 do
-      resources :users, only: [:index]
-      resources :questions
+      resources :users, only: [:index, :show]
+      resources :questions, only: [:show, :create, :index]
+      resources :user_answers, only: :create
     end
 
   end

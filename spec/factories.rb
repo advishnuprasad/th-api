@@ -4,7 +4,6 @@ FactoryGirl.define do
     question
   end
 
-
   factory :question do
     title         "Sample"
     description   "Sample"
