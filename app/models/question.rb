@@ -1,6 +1,6 @@
 class Question < ActiveRecord::Base
 
-  FILESIZE_LIMIT = 2.megabytes
+  FILESIZE_LIMIT = 3.megabytes
 
   mount_uploader :image, ImageUploader
 
@@ -11,7 +11,7 @@ class Question < ActiveRecord::Base
 
   def image_size
     if image.file.size > FILESIZE_LIMIT
-      errors.add(:file, "You cannot upload a file greater than #{FILESIZE_LIMIT} MB")
+      errors.add(:file, "You cannot upload a file greater than 3 MB")
     end
   end
 
